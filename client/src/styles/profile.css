@@ -1,0 +1,295 @@
+.profile{
+    padding-top: 5%;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 40px;
+}
+
+/*added from here */
+.pad{
+    padding-left:25%;
+}
+.profile_head{
+    padding-top: 0%;
+}
+.profile_img{
+    display:flex;
+    overflow: hidden;
+    padding-top: 10px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background-color: white;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    overflow:hidden;
+}
+.profile_head_img{
+    position:relative;
+
+}
+.profile_img2{
+
+}
+/* to here */
+
+/* #region info component */ 
+.info{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.info_container{
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info_content{
+    margin: 0%;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    opacity: 0.7;
+}
+
+.info_content_title{
+    align-self: center;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.info_content_title_main{
+    align-self: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@font-face { font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+.info_content_title h2{
+    font-family: '지마켓산스체2', 'GmarketSansBold', 'GmarketSansBold';
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    transform: translateY(4px);
+}
+.info_content_title2 {
+    align-self: center;
+    margin: auto;
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+    float:right;
+}
+
+.info button{
+    border-top: 0;
+    border-bottom: 0;
+    font-size: 20px;
+    
+}
+.follow_btn_main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.buttons button{
+    background-color: lightgray;
+    border-right-color: blue;
+    border-left-color: blue;
+}
+.buttons{
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+.follow_btn{
+    display: flex;
+    justify-content: center;
+    color: var(--c1);
+    cursor: pointer;
+}
+.follow_btn span {
+    transition: all 3s ease-in;
+}
+
+.follow_btn span:hover {
+    text-decoration: underline;
+}
+.followers_button{
+    float: left;
+}
+.following_butoon{
+    float: right;
+}
+/* #endregion */
+
+
+/* #region edit profile component */
+
+.edit_profile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0008;
+    z-index: 9;
+    overflow: auto;
+
+}
+
+.edit_profile form{
+    max-width: 450px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.edit_profile form input{
+    border: none;
+    outline: none;
+    border-radius: 0;
+    border-bottom: 1px var(--c3) solid;
+}
+.edit_profile form textarea{
+    border-radius: 5px;
+    border: 1px var(--c3) solid;
+}
+
+.edit_profile .btn_close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.edit_profile .info_avatar{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    margin: 15px auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.edit_profile .info_avatar img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.edit_profile .info_avatar span{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    color: orange;
+    transition: 0.3s ease-in-out;
+    background: #fff5;
+}
+
+.edit_profile .info_avatar:hover span{
+    bottom: -15%;
+}
+
+.edit_profile .info_avatar #file_up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+::-webkit-file-upload-button{
+    cursor: pointer;
+}
+
+
+/* #endregion */
+
+
+/* #region follow */
+    .follow{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #0008;
+        width: 100%;
+        height: 100vh;
+        z-index: 4;
+
+    }
+
+    .follow_box{
+        width: 400px;
+        height: 400px;
+        border: 1px solid #222;
+        border-radius: 5px;
+        background: white;
+        padding: 20px 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: auto;
+    }
+
+    .follow_box .follow_box-heading{
+        color: var(--c1);
+    }
+
+    .follow_box .close{
+        position: absolute;
+        top: 0;
+        right: 8px;
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: black;
+    }
+
+/* #endregion */
+
+
+/* #region profile tabs */
+.profile_tab{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile_tab button{
+    outline: none;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    margin: 0 25px;
+    opacity: 0.5;
+}
+
+.profile_tab button.active{
+    border-bottom: 4px solid var(--c1);
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/* #endregion */
+
+
+
+
